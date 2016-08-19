@@ -1,0 +1,7 @@
+include LICENSE
+include README.md
+include neutronui/static/*
+include neutronui/templates/*
+include app/neutronui.icns
+include app/neutronui.xpm
+include app/neutronui.desktop

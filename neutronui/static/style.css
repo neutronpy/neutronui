@@ -1,0 +1,134 @@
+html, body {
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 10pt;
+}
+
+div {
+    overflow: hidden;
+}
+
+select {
+    text-align: center;
+}
+
+.base {
+    align: center;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+div#title {
+    font-size: 2em;
+    font-weight: bold;
+    width: auto;
+    padding-left: 2em;
+}
+
+div.top {
+    float: top;
+    vertical-align: top;
+    margin-bottom: auto;
+    margin-top: auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+div.bottom {
+    float: bottom;
+    vertical-align: bottom;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input {
+    width: 40px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+input.long {
+    width: 100px;
+}
+
+input.longer {
+    width: 120px;
+}
+
+#right-align {
+    text-align: right;
+}
+
+p.title {
+    text-align: center;
+    font-weight: bold;
+    text-size: 16;
+    font-size: large;
+    padding-top: 0px;
+    padding-bottom: -5px;
+    margin-top: 0px;
+    margin-bottom: -5px;
+}
+
+div.border {
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    margin: 2px;
+}
+
+div.left-float {
+    float: left;
+    padding-left: 0em;
+    width: 48%;
+}
+
+div.right-float {
+    float: right;
+    padding-right: 0em;
+    width: 48%;
+}
+
+div#grid {
+    margin-right: auto;
+    margin-left: auto;
+    float: left;
+    padding: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+div#plot-grid {
+    align: center;
+}
+
+div.plot {
+    height: 200px;
+    width: 225px;
+    background-color: gray;
+    margin: 5px;
+    float: right;
+    align: center;
+}
+
+#right-align-pad {
+    #right-align;
+    padding-right: 1em;
+}

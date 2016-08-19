@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" media="all" href="/static/style.css"/>
+</head>
+<body>
+<div class="base">
+    <div class="top">
+        <div class="left-float" id="title">NeutronPy TAS Resolution Calculator</div>
+        <div class="right-float">
+            <span style="text-weight: bold;">Q</span>: <input class="long" type="text" name="q-vector" value="1,1,0,0">
+            &nbsp; &nbsp; &nbsp;
+            Method:
+            <select>
+                <option value="cooper-nathans">Cooper-Nathans</option>
+                <option value="popovici">Popovici</option>
+                <option value="eckold">Eckold</option>
+            </select>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="left-float" id="grid">
+            <div class="border">
+                <p class="title">Neutron Energy</p><br/>
+                <select>
+                    <option value="energy">energy (meV)</option>
+                    <option value="wavelength">wavelength (Å)</option>
+                    <option value="wavevector">wave vector (1/Å)</option>
+                </select>
+                <input type="text" name="energy-value" value="14.7">
+                <select>
+                    <option value="ki">ki</option>
+                    <option value="kf">kf</option>
+                </select>
+            </div>
+            <div class="border">
+                <p class="title">Monochromator</p><br/>
+                <div class="top">
+                    d-spacing (Å)
+                    <select>
+                        <option value="pg002">PG(002)</option>
+                        <option value="pg004">PG(004)</option>
+                        <option value="pg110">PG(110)</option>
+                        <option value="ge111">Ge(111)</option>
+                        <option value="ge220">Ge(220)</option>
+                        <option value="ge311">Ge(311)</option>
+                        <option value="be002">Be(002)</option>
+                        <option value="cma111">Cu2MnAl(111)</option>
+                        <option value="cf200">Co0.92Fe0.08(200)</option>
+                        <option value="ge511">Ge(511)</option>
+                        <option value="ge533">Ge(533)</option>
+                        <option value="si111">Si(111)</option>
+                        <option value="cu111">Cu(111)</option>
+                        <option value="cu002">Cu(002)</option>
+                        <option value="cu220">Cu(220)</option>
+                        <option value="custom">Custom</option>
+                    </select>
+                    &nbsp;
+                    <input type="text" name="monodspacing"></div>
+                <div class="left-float" id="right-align">
+                    mosaic (arc min) <input type="text" name="mono-mosaic" value="60"><br/>
+                    vmosaic (arc min) <input type="text" name="mono-vmosaic" value="60">
+                </div>
+                <div class="right-float" id="right-align-pad">
+                    height (cm) <input type="text" name="monoh" value="1"><br/>
+                    width (cm) <input type="text" name="monow" value="1"><br/>
+                    depth (cm) <input type="text" name="monod" value="1">
+                </div>
+                <div class="bottom">
+                    Horizontal curvature (cm) <input type="text" name="monorh" value="None">
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    Vertical curvature (cm) <input type="text" name="monorv" value="None">
+                </div>
+            </div>
+            <div class="border">
+                <p class="title">Sample</p><br/>
+                <div class="left-float" id="right-align">
+                    abc (Å): <input type="text" name="abc" value="4,4,4" class="long"><br/>
+                    abg (deg): <input type="text" name="abg" value="90,90,90" class="long"><br/>
+                    mosaic (arc min) <input type="text" name="sample-mosaic" value="60"><br/>
+                    vmosaic (arc min) <input type="text" name="sample-vmosaic" value="60"><br/>
+                </div>
+                <div class="right-float" id="right-align-pad">
+                    <select>
+                        <option value="rect">Rectangular</option>
+                        <option value="cyl">Cylindrical</option>
+                    </select><br/>
+                    height (cm) <input type="text" name="sampleh" value="1"><br/>
+                    width (cm) <input type="text" name="samplew" value="1"><br/>
+                    depth (cm) <input type="text" name="sampled" value="1"><br/>
+                </div>
+                <div class="bottom">
+                    U <input type="text" name="u" value="1,0,0" class="long">
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    V <input type="text" name="v" value="0,1,0" class="long">
+                </div>
+            </div>
+            <div class="border">
+                <p class="title">Analyzer</p><br/>
+                <div class="top">
+                    d-spacing (Å)
+                    <select>
+                        <option value="pg002">PG(002)</option>
+                        <option value="pg004">PG(004)</option>
+                        <option value="pg110">PG(110)</option>
+                        <option value="ge111">Ge(111)</option>
+                        <option value="ge220">Ge(220)</option>
+                        <option value="ge311">Ge(311)</option>
+                        <option value="be002">Be(002)</option>
+                        <option value="cma111">Cu2MnAl(111)</option>
+                        <option value="cf200">Co0.92Fe0.08(200)</option>
+                        <option value="ge511">Ge(511)</option>
+                        <option value="ge533">Ge(533)</option>
+                        <option value="si111">Si(111)</option>
+                        <option value="cu111">Cu(111)</option>
+                        <option value="cu002">Cu(002)</option>
+                        <option value="cu220">Cu(220)</option>
+                        <option value="custom">Custom</option>
+                    </select>
+
+                    <input type="text" name="anadspacing">
+                </div>
+                <div class="left-float" id="right-align">
+                    mosaic (arc min) <input type="text" name="ana-mosaic" value="60"><br/>
+                    vmosaic (arc min) <input type="text" name="ana-vmosaic" value="60">
+                </div>
+                <div class="right-float" id="right-align-pad">
+                    height (cm) <input type="text" name="anah" value="1"><br/>
+                    width (cm) <input type="text" name="anaw" value="1"><br/>
+                    depth (cm) <input type="text" name="anad" value="1">
+                </div>
+                <br/>
+                <div class="bottom">
+                    Horizontal curvature (cm) <input type="text" name="anarh" value="None">
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    Vertical curvature (cm) <input type="text" name="anarv" value="None">
+                </div>
+            </div>
+            <div class="border">
+                <p class="title">Miscellaneous</p><br/>
+                Monitor Normalization
+                <select>
+                    <option value="on">On</option>
+                    <option value="off">Off</option>
+                </select>
+            </div>
+        </div>
+        <div class="right-float" id="grid">
+            <div class="border" id="plot-grid">
+                <div class="plot"></div>
+                <div class="plot"></div>
+                <br/>
+                <div class="plot"></div>
+                <div class="plot"></div>
+            </div>
+            <div class="bottom">
+                <div style="border-style:solid;border-width:1px;border-radius:10px;float:left;width:63%;padding:2px;text-align:right;">
+                    <p class="title">Collimations</p><br/>
+                    Horizontal (arc min): <input type="text" name="hcol" class="longer" value="120,60,60,120"><br/>
+                    Vertical (arc min): <input type="text" name="vcol" class="longer" value="120,120,120,120"><br/>
+                    Distance (cm): <input type="text" name="arms" class="longer" value="300,300,300,300"><br/>
+                </div>
+                <div style="border-style:solid;border-width:1px;border-radius:10px;float:right;width:35%;padding:2px;">
+                    <p class="title">Guide</p><br/>
+                    width (cm): <input type="text" name="gw" value="10"><br/>
+                    height (cm): <input type="text" name="gh" value="10"><br/>
+                    <p class="title">Detector</p><br/>
+                    width (cm): <input type="text" name="dw" value="10"><br/>
+                    height (cm): <input type="text" name="dh" value="10"><br/>
+                </div>
+            </div>
+            <div class="border">
+                <p class="title">Scattered Directions</p><br/>
+                <select>
+                    <option value="clockwise">Clockwise</option>
+                    <option value="counter-clockwise">Counter-Clockwise</option>
+                </select>
+                <select>
+                    <option value="counter-clockwise">Counter-Clockwise</option>
+                    <option value="clockwise">Clockwise</option>
+                </select>
+                <select>
+                    <option value="clockwise">Clockwise</option>
+                    <option value="counter-clockwise">Counter-Clockwise</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
